@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="todo.js"> </script>
+    <link rel="stylesheet" type="text/css" href="todo.css" />
+</head>
+
+<body onload="handleLoad()" id="body">
+    <div class="container">
+        <h1>TO-DO list!</h1>
+        <form>
+            <input type="text" id="textInput" placeholder="add something to the list!" />
+            <input type="submit" value="Submit" />
+        </form>
+        <input type="text" id="search" onkeyup="handleSearch(this)" class="search"
+            placeholder="search for a certain word" />
+        <ul id="list">
+        </ul>
+        <button onclick="deleteAll()" id="delete">delete done tasks</button>
+        <button onclick="filterDone()" id="not">not done</button>
+        <button onclick="filtertodo()" id="done">done</button>
+        <button onclick="removeFilters()" id="clear">clear filters</button>
+    </div>
+</body>
+
+</html>
